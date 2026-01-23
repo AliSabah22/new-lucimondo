@@ -33,7 +33,7 @@ const products = [
 export default function FeaturedProducts() {
   return (
     <section
-      id="shop"
+      id="products"
       className="py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,14 +72,15 @@ export default function FeaturedProducts() {
                 </div>
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-primary-700/0 group-hover:bg-primary-700/10 transition-all duration-300 flex items-center justify-center">
-                  <motion.button
+                  <motion.a
+                    href="#"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileHover={{ scale: 1.1 }}
                     className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-primary-700 px-6 py-3 rounded-full font-semibold flex items-center space-x-2"
                   >
-                    <span>Quick View</span>
+                    <span>View Details</span>
                     <ArrowRight size={18} />
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
 
@@ -100,37 +101,20 @@ export default function FeaturedProducts() {
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-primary-700">{product.price}</span>
-                  <motion.button
+                  <motion.a
+                    href="#"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-2 bg-primary-700 text-white rounded-full font-semibold hover:bg-primary-800 transition-colors"
                   >
-                    Add to Cart
-                  </motion.button>
+                    View Details
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-center mt-12"
-        >
-          <motion.a
-            href="#shop"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>View All Products</span>
-            <ArrowRight size={20} />
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   )

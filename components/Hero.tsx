@@ -64,12 +64,12 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <motion.a
-                href="#shop"
+                href="#products"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-primary-700 text-white rounded-full font-semibold text-lg hover:bg-primary-800 transition-all premium-shadow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Shop Now
+                View Products
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </motion.a>
               <motion.a

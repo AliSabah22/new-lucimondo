@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, ShoppingBag } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface NavigationProps {
@@ -19,7 +19,7 @@ export default function Navigation({ isScrolled }: NavigationProps) {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
-    { name: 'Shop', href: '#shop' },
+    { name: 'Products', href: '#products' },
     { name: 'Contact Us', href: '#contact' },
   ]
 
@@ -64,14 +64,6 @@ export default function Navigation({ isScrolled }: NavigationProps) {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-700 transition-all group-hover:w-full" />
               </motion.a>
             ))}
-            <motion.button
-              className="flex items-center space-x-2 px-6 py-2.5 bg-primary-700 text-white rounded-full hover:bg-primary-800 transition-all font-medium"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <ShoppingBag size={18} />
-              <span>Shop Now</span>
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,10 +97,6 @@ export default function Navigation({ isScrolled }: NavigationProps) {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full flex items-center justify-center space-x-2 px-6 py-2.5 bg-primary-700 text-white rounded-full hover:bg-primary-800 transition-all font-medium">
-                <ShoppingBag size={18} />
-                <span>Shop Now</span>
-              </button>
             </div>
           </motion.div>
         )}

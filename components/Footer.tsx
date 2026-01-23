@@ -12,10 +12,10 @@ export default function Footer() {
       { name: 'Our Story', href: '#about' },
       { name: 'Careers', href: '#' },
     ],
-    shop: [
-      { name: 'All Products', href: '#shop' },
-      { name: 'Travel Wallets', href: '#shop' },
-      { name: 'Accessories', href: '#shop' },
+    products: [
+      { name: 'All Products', href: '#products' },
+      { name: 'Travel Wallets', href: '#products' },
+      { name: 'Accessories', href: '#products' },
     ],
     support: [
       { name: 'Contact Us', href: '#contact' },
@@ -102,16 +102,10 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-800 pt-8 flex justify-center items-center"
         >
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <p className="text-gray-400 text-sm">
             Copyright © {currentYear} Lucimondo Designs - All Rights Reserved.
-          </p>
-          <p className="text-gray-500 text-sm">
-            Powered by{' '}
-            <a href="#" className="text-primary-400 hover:text-primary-300">
-              Millennial Marketing Agency
-            </a>
           </p>
         </motion.div>
       </div>

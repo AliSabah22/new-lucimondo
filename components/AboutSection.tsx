@@ -57,12 +57,12 @@ export default function AboutSection() {
               sets us apart.
             </p>
             <motion.a
-              href="#shop"
+              href="#products"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-primary-700 text-white rounded-full font-semibold hover:bg-primary-800 transition-all premium-shadow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Explore Our Products</span>
+              <span>View Our Products</span>
             </motion.a>
           </motion.div>
 
