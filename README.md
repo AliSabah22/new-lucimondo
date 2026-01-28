@@ -1,69 +1,54 @@
-# Lucimondo Designs - Premium Travel Wallets Website
+# Lucimondo — Luxury Travel Carry-On Brand
 
-A modern, premium website for Lucimondo Designs, featuring high-quality leather travel wallets with currency inserts.
+One-page, display-only brand website for a high-end travel carry-on bag brand. Precision travel, effortless movement, quiet luxury.
 
-## Features
-
-- 🎨 **Premium Design**: Modern, elegant UI with smooth animations
-- 📱 **Fully Responsive**: Optimized for all devices
-- ⚡ **Performance**: Built with Next.js 14 for optimal performance
-- 🎭 **Animations**: Smooth transitions using Framer Motion
-- 🎯 **SEO Optimized**: Proper meta tags and semantic HTML
+**Product focus:** Small carry-on bags for passports, credit cards, IDs, and multiple currencies.  
+**Goal:** Create desire and authority. All purchase CTAs link to Shopify (no checkout, cart, or pricing on-site).
 
 ## Tech Stack
 
-- **Next.js 14** - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **Lucide React** - Icons
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide React**
+
+## One-Page Structure (anchor sections)
+
+| Section | Description |
+|--------|-------------|
+| **Hero** | Full-bleed hero, one carry-on, ≤7-word headline, supporting line, “Enter the Collection” → Shopify |
+| **The Concept** | Control / chaos, movement with intention, elegance through organization. Short sections, strong statements. |
+| **The Carry-On** | Passport, card/ID, currency features. One concise line each. Single “Acquire” CTA → Shopify. |
+| **Designed for Movement** | Airports, lounges, border crossings. Efficiency, ease, confidence. |
+| **Craft & Materials** | Materials, build precision, longevity. No specs or comparisons. |
+| **Exclusivity** | Limited production, controlled distribution, not for everyone. Selective tone. |
+| **Journal** | Campaign imagery, travel culture, movement/design/elegance. Visual, not a blog. |
+| **Press** | Editorial logos, select imagery. No quotes, testimonials, or explanations. |
+| **Footer** | Invite-only newsletter, Instagram, legal, region/currency selector. |
+
+Additional routes: `/legal/privacy`, `/legal/terms`.
+
+## Configuration
+
+- **`lib/config.ts`** — `SHOPIFY_BASE_URL`, `NAV`, `LEGAL`, `REGIONS` (label + currency).
+- **Footer** — Update `INSTAGRAM_URL` in `components/Footer.tsx`.
 
 ## Getting Started
 
-### Installation
-
 ```bash
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-### Build
+## Design
 
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-├── app/
-│   ├── layout.tsx      # Root layout
-│   ├── page.tsx        # Home page
-│   └── globals.css     # Global styles
-├── components/
-│   ├── Navigation.tsx   # Header navigation
-│   ├── Hero.tsx        # Hero section
-│   ├── FeaturedProducts.tsx
-│   ├── PhotoGallery.tsx
-│   ├── ContactSection.tsx
-│   └── Footer.tsx
-└── public/             # Static assets
-```
-
-## Customization
-
-- Colors: Edit `tailwind.config.js` to customize the color scheme
-- Content: Update components with your actual product information
-- Images: Replace placeholder images with your product photos
+- One-page scroll with anchor navigation. Warmer palette (cream, warm gray, soft charcoal, brand warm).
+- Cormorant Garamond (serif) + Inter (sans). Soft rounded corners, generous spacing, subtle scroll fade-ins (Framer Motion).
+- Nav: light over dark hero; solid light background when scrolled. Tone: minimal, confident, refined.
 
 ## License
 
-All rights reserved - Lucimondo Designs
+All rights reserved — Lucimondo

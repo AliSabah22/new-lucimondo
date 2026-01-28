@@ -1,34 +1,23 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-import Navigation from '@/components/Navigation'
-import Hero from '@/components/Hero'
-import AboutSection from '@/components/AboutSection'
-import FeaturedProducts from '@/components/FeaturedProducts'
-import PhotoGallery from '@/components/PhotoGallery'
-import ContactSection from '@/components/ContactSection'
-import Footer from '@/components/Footer'
+import HeroSection from '@/components/sections/HeroSection'
+import ConceptSection from '@/components/sections/ConceptSection'
+import CarryOnSection from '@/components/sections/CarryOnSection'
+import MovementSection from '@/components/sections/MovementSection'
+import CraftSection from '@/components/sections/CraftSection'
+import ExclusivitySection from '@/components/sections/ExclusivitySection'
+import JournalSection from '@/components/sections/JournalSection'
+import PressSection from '@/components/sections/PressSection'
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <main className="min-h-screen">
-      <Navigation isScrolled={isScrolled} />
-      <Hero />
-      <AboutSection />
-      <FeaturedProducts />
-      <PhotoGallery />
-      <ContactSection />
-      <Footer />
+    <main>
+      <HeroSection />
+      <ConceptSection />
+      <CarryOnSection />
+      <MovementSection />
+      <CraftSection />
+      <ExclusivitySection />
+      <JournalSection />
+      <PressSection />
     </main>
   )
 }
